@@ -5,39 +5,50 @@ import Preview from './Preview';
 
 function App() {
   const [signatureData, setSignatureData] = useState({
-    // Contact Info
-    name: 'Juan Pérez',
-    title: 'Desarrollador de Software',
-    company: 'Soluciones Digitales S.L.',
-    phone: '+34 600 123 456',
-    email: 'juan.perez@ejemplo.com',
-    website: 'www.ejemplo.com',
-    // Styling
-    fontFamily: 'Arial, sans-serif',
-    fontSize: 12,
-    textColor: '#000000',
-    linkColor: '#0000EE',
+    // 🧾 Datos Personales y Corporativos
+    nombreCompleto: 'Carlos Ranu',
+    cargo: 'Consultor de Marketing Digital',
+    empresa: 'Ranu.pro',
+    slogan: 'Tecnología para evolucionar',
+    telefonoDirecto: '+56912345678',
+    email: 'contacto@ranu.pro',
+    sitioWeb: 'www.ranu.pro',
+    ubicacion: 'Santiago, Chile',
+
+    // 🌍 Redes Sociales Profesionales
+    linkedinUrl: 'https://linkedin.com/in/carlosranu',
+    instagramUrl: 'https://instagram.com/ranu.pro',
+    twitterUrl: '',
+    facebookUrl: '',
+    youtubeUrl: '',
+    whatsappUrl: 'https://wa.me/56912345678?text=Hola%20%F0%9F%91%8B',
+    calendlyUrl: 'https://calendly.com/ranu-pro/30min',
+
+    // 📎 Extras Inteligentes y Diferenciales
+    fotoUrl: 'https://i.imgur.com/Jq6v5v1.png', // Placeholder
+    logoEmpresaUrl: '', // Placeholder
+    qrCodeUrl: '', // e.g., URL to a generated QR image
+    cierreCta: '¿Coordinamos una llamada?',
+    disclaimer: 'Este mensaje y sus anexos son confidenciales y para uso exclusivo del destinatario.',
+
+    // 🎨 Diseño y Tecnología
+    themeColor: '#007bff', // A main theme color for links, icons, etc.
+    textColor: '#333333',
     signatureBgColor: '#FFFFFF',
-    showIcons: true,
-    // Logo
-    logoUrl: 'https://i.imgur.com/Jq6v5v1.png',
-    logoPosition: 'left',
-    logoWidth: 70,
-    // Banner
-    bannerUrl: '',
-    bannerPosition: 'top',
+    darkModeTextColor: '#FFFFFF',
+    darkModeBgColor: '#2d2d2d',
   });
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
         <Container>
-          <Navbar.Brand href="#home">Generador de Firmas para Apple Mail</Navbar.Brand>
+          <Navbar.Brand href="#home">Generador de Firmas v2</Navbar.Brand>
         </Container>
       </Navbar>
-      <Container fluid className="mt-4">
+      <Container fluid>
         <Row>
-          <Col md={5}>
+          <Col md={5} className="mb-3">
             <Editor data={signatureData} setData={setSignatureData} />
           </Col>
           <Col md={7}>
