@@ -5,17 +5,27 @@ import Preview from './Preview';
 
 function App() {
   const [signatureData, setSignatureData] = useState({
+    // Contact Info
     name: 'Juan Pérez',
     title: 'Desarrollador de Software',
     company: 'Soluciones Digitales S.L.',
     phone: '+34 600 123 456',
     email: 'juan.perez@ejemplo.com',
     website: 'www.ejemplo.com',
-    logoUrl: 'https://i.imgur.com/Jq6v5v1.png', // Placeholder logo
+    // Styling
     fontFamily: 'Arial, sans-serif',
     fontSize: 12,
     textColor: '#000000',
     linkColor: '#0000EE',
+    signatureBgColor: '#FFFFFF',
+    showIcons: true,
+    // Logo
+    logoUrl: 'https://i.imgur.com/Jq6v5v1.png',
+    logoPosition: 'left',
+    logoWidth: 70,
+    // Banner
+    bannerUrl: '',
+    bannerPosition: 'top',
   });
 
   return (
